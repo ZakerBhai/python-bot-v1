@@ -4,7 +4,7 @@ import telebot
 import random
 import requests
 
-TOKEN = "₹"
+TOKEN = "Paytm CASH"
 AIRDROP = "Nothing"
 BOT_TOKEN = "2109651438:AAG5dwtZF9aEglI899kU4IyusKaFTo8fDUg"
 PAYMENT_CHANNEL = "@scripter_adda"
@@ -554,7 +554,7 @@ def send_text(message):
             user_id = message.chat.id
             user = str(user_id)
             data = json.load(open('paytmusers.json', 'r'))
-            msg = "<b>📊 Total members : {} Users\n\n💎 Total successful Withdraw : {} {}/n/n Coded By:- @Coder_shinchan</b>"
+            msg = "<b>📊 Total members : {} Users\n\n💎 Total successful Withdraw : {} {}</b>"
             msg = msg.format(data['total'], data['totalwith'], TOKEN)
             bot.send_message(user_id, msg, parse_mode="html")
             return
